@@ -9,23 +9,29 @@ import pandas as pd
 from dash import Dash, html, Input, Output, dcc, dash_table, no_update
 import dash_bootstrap_components as dbc
 
-from visualize_embedding import get_plotly_embedding
-from visualize_structure import get_plotly_structure
-from utils import fn_chemical_check, blank_fig
+from visualize_app.visualize_embedding import get_plotly_embedding
+from visualize_app.visualize_structure import get_plotly_structure
+from visualize_app.utils import fn_chemical_check, blank_fig
 
 PARENT_DIR = Path(os.path.dirname(__file__))
 # load label data
-LABEL_DATA = pd.read_pickle(PARENT_DIR / "assets/df_binary_label.pkl")
+LABEL_DATA = pd.read_pickle(PARENT_DIR / "visualize_app/assets/df_binary_label.pkl")
 LABEL_DATA["label"] = LABEL_DATA["label"].astype(str)
 # load materials project data
-MP_DATA = pd.read_pickle(PARENT_DIR / "assets/df_binary_mp.pkl")
+MP_DATA = pd.read_pickle(PARENT_DIR / "visualize_app/assets/df_binary_mp.pkl")
 
 
 def main(
-    debug: bool = True,
+    debug: bool = False,
     host: str = "0.0.0.0",
     port: int = 8050,
 ):
+    """Visualize the embedding of binary compounds.
+
+    :param debug: Debug mode, defaults to False
+    :param host: host address, defaults to "0.0.0.0"
+    :param port: port number, defaults to 8050
+    """
     # initialize the app - incorporate a Dash Bootstrap theme
     external_stylesheets = [dbc.themes.MINTY]
     app = Dash(__name__, external_stylesheets=external_stylesheets)
@@ -239,7 +245,7 @@ def main(
             embedding_method = "magpie"
 
         # set the path to the embedding
-        path_embedding = Path(PARENT_DIR, "assets/reduced_embeddings_3d")
+        path_embedding = Path(PARENT_DIR, "visualize_app/assets/reduced_embeddings_3d")
         path_embedding = (
             path_embedding / f"{reduction_method}_{embedding_method}_mean.pkl"
         )
