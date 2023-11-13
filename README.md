@@ -12,7 +12,7 @@
 ## Features
 - 6 Element Embeddings (magpie, mat2vec, megnet16, oliynyk, skipatom, random) provided by [ElementEmbeddings](https://github.com/WMD-group/ElementEmbeddings)
 - 3 Dimensionality Reductions (PCA, TSNE, UMAP)
-- Visualize 3D Interactive Plots with Crystal Strctures and Tables of Properties registed in the Materials Project.
+- Visualize 3D Interactive Plots with Crystal Strctures and a Table of Properties registed in the Materials Project
 
 ## Installation
 
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 python app.py --help
 ```
 
--- Run the app with specific ip and port
+- Run the app with specific ip and port
 
 ```bash
 python app.py --host=0.0.0.0 --port=8050
