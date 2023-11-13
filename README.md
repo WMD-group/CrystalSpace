@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<h1> Crystal Space 🏁 </h1>
+<h1> Crystal Space 🚀 </h1>
 
   <p>
     <strong>Mapping Crystal Space for Binary Compounds</strong>
