@@ -2,7 +2,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from pymatgen.core import Structure
 from pymatgen.core.periodic_table import Element
-from assets.atom_colors import jmol_colors
+from visualize_app.assets.atom_colors import jmol_colors
 
 
 def get_plotly_structure(structure: Structure = None) -> go.Figure:

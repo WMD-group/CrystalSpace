@@ -1,0 +1,7 @@
+fire
+pandas
+ase
+pymatgen
+dash
+plotly
+dash_bootstrap_components
