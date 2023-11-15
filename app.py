@@ -313,13 +313,13 @@ def main(
                     "volume",
                     "density",
                     "density_atomic",
-                    "energy_per_atom",
-                    "formation_energy_per_atom",
-                    "energy_above_hull",
                     "is_stable",
-                    "band_gap",
-                    "efermi",
-                    "total_magnetization",
+                    # "energy_per_atom",
+                    # "formation_energy_per_atom",
+                    # "energy_above_hull",
+                    # "band_gap",
+                    # "efermi",
+                    # "total_magnetization",
                 ]
             ]
             .T.reset_index()
