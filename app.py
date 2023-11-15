@@ -334,7 +334,7 @@ def main(
         return formula, new_fig, new_table
 
     # run the app
-    app.run(debug=debug, host=host, port=port)
+    app.run_server(debug=debug, host=host, port=port)
 
 
 if __name__ == "__main__":
