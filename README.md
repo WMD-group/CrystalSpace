@@ -10,9 +10,9 @@
 </div>
 
 ## Features
-- 6 Element Embeddings (magpie, mat2vec, megnet16, oliynyk, skipatom, random) provided by [ElementEmbeddings](https://github.com/WMD-group/ElementEmbeddings)
-- 3 Dimensionality Reductions (PCA, TSNE, UMAP)
-- Visualize 3D Interactive Plots with Crystal Strctures and a Table of Properties registed in the Materials Project
+- 6 Element embeddings (magpie, mat2vec, megnet16, oliynyk, skipatom, random) provided by [ElementEmbeddings](https://github.com/WMD-group/ElementEmbeddings)
+- 3 dimensionality reduction techniques (PCA, TSNE, UMAP)
+- Visualise 3D interactive plots with crystal structures (where available from Materials Project)
 
 ## Installation
 
