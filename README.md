@@ -10,7 +10,8 @@
 </div>
 
 ## Features
-- 6 Element embeddings (magpie, mat2vec, megnet16, oliynyk, skipatom, random) provided by [ElementEmbeddings](https://github.com/WMD-group/ElementEmbeddings)
+- Binary element combinations generating using [SMACT](https://github.com/WMD-group/SMACT)
+- 6 element embeddings (magpie, mat2vec, megnet16, oliynyk, skipatom, random) provided by [ElementEmbeddings](https://github.com/WMD-group/ElementEmbeddings)
 - 3 dimensionality reduction techniques (PCA, TSNE, UMAP)
 - Visualise 3D interactive plots with crystal structures (where available from Materials Project)
 
