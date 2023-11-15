@@ -64,7 +64,7 @@ def main(
                                 {"label": "UMAP", "value": "umap"},
                                 {"label": "PCA", "value": "pca"},
                             ],
-                            value="tsne",
+                            value="umap",
                         ),
                         width=3,
                     ),
@@ -80,7 +80,7 @@ def main(
                                 {"label": "skipatom", "value": "skipatom"},
                                 {"label": "random_200", "value": "random_200"},
                             ],
-                            value="skipatom",
+                            value="magpie",
                         ),
                         width=3,
                     ),
@@ -218,6 +218,69 @@ def main(
                 ),
                 style={"border": "none"},
             ),
+            # set the footer
+            # add line
+            html.Hr(),
+            dbc.Row(
+                [
+                    dbc.Col(
+                        html.H6(
+                            dcc.Link(
+                                "Created by Hyunsoo Park in WMD Group",
+                                href="https://github.com/wmd-group",
+                                style={"color": "black"},
+                            ),
+                            style={
+                                "textAlign": "right",
+                            },
+                        ),
+                        width=12,
+                    ),
+                    # add reference 1
+                    dbc.Col(
+                        html.H6(
+                            dcc.Link(
+                                "Reference 1. element embeddings from [ElementEmbeddings GitHub repository]",
+                                href="https://github.com/WMD-group/ElementEmbeddings",
+                                style={"color": "grey"},
+                            ),
+                            style={
+                                "textAlign": "right",
+                            },
+                        ),
+                        width=12,
+                    ),
+                    # add reference 2
+                    dbc.Col(
+                        html.H6(
+                            dcc.Link(
+                                "Reference 2. structure data from [Materials Project]",
+                                href="https://materialsproject.org/",
+                                style={"color": "grey"},
+                            ),
+                            style={
+                                "textAlign": "right",
+                            },
+                        ),
+                        width=12,
+                    ),
+                    # add reference 3
+                    dbc.Col(
+                        html.H6(
+                            dcc.Link(
+                                "Reference 3. dimension reduction from [scikit-learn]",
+                                href="https://scikit-learn.org/stable/",
+                                style={"color": "grey"},
+                            ),
+                            style={
+                                "textAlign": "right",
+                            },
+                        ),
+                        width=12,
+                    ),
+                ],
+                justify="start",
+            ),
         ]
     )
 
@@ -238,12 +301,6 @@ def main(
         chemical_system_1,
         chemical_system_2,
     ):
-        # set default values for reduction_method and embedding_method
-        if reduction_method == "default":
-            reduction_method = "tsne"
-        if embedding_method == "default":
-            embedding_method = "magpie"
-
         # set the path to the embedding
         path_embedding = Path(PARENT_DIR, "visualize_app/assets/reduced_embeddings_3d")
         path_embedding = (
@@ -313,13 +370,13 @@ def main(
                     "volume",
                     "density",
                     "density_atomic",
-                    "energy_per_atom",
-                    "formation_energy_per_atom",
-                    "energy_above_hull",
                     "is_stable",
-                    "band_gap",
-                    "efermi",
-                    "total_magnetization",
+                    # "energy_per_atom",
+                    # "formation_energy_per_atom",
+                    # "energy_above_hull",
+                    # "band_gap",
+                    # "efermi",
+                    # "total_magnetization",
                 ]
             ]
             .T.reset_index()

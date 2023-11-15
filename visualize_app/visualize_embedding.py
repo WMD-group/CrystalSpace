@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 
 def get_plotly_embedding(
     df: pd.DataFrame = None,
-    opacity: float = 0.5,
+    opacity: float = 0.2,
     **kwargs,
 ) -> go.Figure:
     """
@@ -31,9 +31,13 @@ def get_plotly_embedding(
         color="label",
         color_discrete_map={
             "0": "#D9D9D9",
-            "1": "#22E000",
-            "2": "#FF1201",
-            "3": "#002FFF",
+            "1": "rgba(34, 224, 0, 0.8)",
+            "2": "rgba(255, 18, 1, 0.8)",
+            "3": "rgba(0, 47, 255, 0.8)",
+            # "0": px.colors.qualitative.Vivid[-1],  # "#D9D9D9"
+            # "1": px.colors.qualitative.Vivid[0],  # "#22E000",
+            # "2": px.colors.qualitative.Vivid[1],  # "#FF1201",
+            # "3": px.colors.qualitative.Vivid[2],  # "#002FFF",
         },
         opacity=opacity,
         hover_data=[
@@ -96,7 +100,7 @@ def get_plotly_embedding(
 
     fig.update_traces(
         marker=dict(
-            size=8,
+            size=5,
             # line=dict(width=0.5, color="Grey"),
         ),
         selector=dict(mode="markers"),
@@ -104,7 +108,6 @@ def get_plotly_embedding(
 
     # update the legend title
     fig.update_layout(
-        legend_title_text="(smact_allowed, mp_data)",
+        legend_title_text="            click legend 👆          <br>(smact_allowed, mp_data)",
     )
-
     return fig
