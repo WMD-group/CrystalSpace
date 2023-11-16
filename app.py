@@ -43,7 +43,7 @@ def main(
             dbc.Row(
                 [
                     html.H1(
-                        "Crystal Space for Binary Compounds 🚀",
+                        "Crystal Space for Binary Compounds 🔮",
                         style={
                             "textAlign": "center",
                             "color": "black",
@@ -58,7 +58,7 @@ def main(
                     # set selector for dimension reduction method
                     dbc.Col(
                         dbc.Select(
-                            id="reduction-method-selelct",
+                            id="reduction-method-select",
                             options=[
                                 {"label": "t-SNE", "value": "tsne"},
                                 {"label": "UMAP", "value": "umap"},
@@ -139,7 +139,7 @@ def main(
                             [
                                 dbc.CardHeader(
                                     html.H4(
-                                        "Scatter Plot",
+                                        "Crystal Space",
                                         style={
                                             "textAlign": "center",
                                             "color": "black",
@@ -226,7 +226,7 @@ def main(
                     dbc.Col(
                         html.H6(
                             dcc.Link(
-                                "Created by Hyunsoo Park in WMD Group",
+                                "Created by Hyunsoo Park in the Materials Design Group (Imperial College London)",
                                 href="https://github.com/wmd-group",
                                 style={"color": "black"},
                             ),
@@ -240,8 +240,8 @@ def main(
                     dbc.Col(
                         html.H6(
                             dcc.Link(
-                                "Reference 1. element embeddings from [ElementEmbeddings GitHub repository]",
-                                href="https://github.com/WMD-group/ElementEmbeddings",
+                                "1. Composition generation using SMACT",
+                                href="https://github.com/WMD-group/SMACT",
                                 style={"color": "grey"},
                             ),
                             style={
@@ -254,8 +254,8 @@ def main(
                     dbc.Col(
                         html.H6(
                             dcc.Link(
-                                "Reference 2. structure data from [Materials Project]",
-                                href="https://materialsproject.org/",
+                                "2. Element embedding vectors from ElementEmbeddings",
+                                href="https://github.com/WMD-group/ElementEmbeddings",
                                 style={"color": "grey"},
                             ),
                             style={
@@ -268,7 +268,21 @@ def main(
                     dbc.Col(
                         html.H6(
                             dcc.Link(
-                                "Reference 3. dimension reduction from [scikit-learn]",
+                                "3. Structure data from Materials Project",
+                                href="https://materialsproject.org",
+                                style={"color": "grey"},
+                            ),
+                            style={
+                                "textAlign": "right",
+                            },
+                        ),
+                        width=12,
+                    ),
+                    # add reference 4
+                    dbc.Col(
+                        html.H6(
+                            dcc.Link(
+                                "4. Dimensionality reduction using scikit-learn",
                                 href="https://scikit-learn.org/stable/",
                                 style={"color": "grey"},
                             ),
@@ -290,7 +304,7 @@ def main(
             Output("method-name", "children"),
             Output("3d-scatter-plot", "figure"),
         ],
-        Input("reduction-method-selelct", "value"),
+        Input("reduction-method-select", "value"),
         Input("embedding-method-select", "value"),
         Input("chemical-system-select-1", "value"),
         Input("chemical-system-select-2", "value"),
@@ -324,7 +338,7 @@ def main(
             df_plot[mask],
         )
 
-        new_method_name = f"{reduction_method} plot with {embedding_method} Embedding"
+        new_method_name = f"{reduction_method} plot with {embedding_method} embedding"
 
         return new_method_name, new_fig
 
