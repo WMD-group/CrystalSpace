@@ -225,7 +225,7 @@ def main(
                 [
                     dbc.Col(
                         html.H6(
-                            dcc.Link(
+                            html.A(
                                 "Created by Hyunsoo Park in the Materials Design Group (Imperial College London)",
                                 href="https://github.com/wmd-group",
                                 style={"color": "black"},
@@ -239,7 +239,7 @@ def main(
                     # add reference 1
                     dbc.Col(
                         html.H6(
-                            dcc.Link(
+                            html.A(
                                 "1. Composition generation using SMACT",
                                 href="https://github.com/WMD-group/SMACT",
                                 style={"color": "grey"},
@@ -253,7 +253,7 @@ def main(
                     # add reference 2
                     dbc.Col(
                         html.H6(
-                            dcc.Link(
+                            html.A(
                                 "2. Element embedding vectors from ElementEmbeddings",
                                 href="https://github.com/WMD-group/ElementEmbeddings",
                                 style={"color": "grey"},
@@ -267,7 +267,7 @@ def main(
                     # add reference 3
                     dbc.Col(
                         html.H6(
-                            dcc.Link(
+                            html.A(
                                 "3. Structure data from Materials Project",
                                 href="https://materialsproject.org",
                                 style={"color": "grey"},
@@ -281,7 +281,7 @@ def main(
                     # add reference 4
                     dbc.Col(
                         html.H6(
-                            dcc.Link(
+                            html.A(
                                 "4. Dimensionality reduction using scikit-learn",
                                 href="https://scikit-learn.org/stable/",
                                 style={"color": "grey"},
