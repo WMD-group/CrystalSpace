@@ -1,7 +1,6 @@
-
 <div align="center">
 
-<h1> Crystal Space 🚀 </h1>
+<h1> Crystal Space 🔮 </h1>
 
   <p>
     <strong>Mapping Crystal Space for Binary Compounds</strong>
@@ -10,10 +9,10 @@
 </div>
 
 ## Features
-- Binary element combinations generating using [SMACT](https://github.com/WMD-group/SMACT)
-- 6 element embeddings (magpie, mat2vec, megnet16, oliynyk, skipatom, random) provided by [ElementEmbeddings](https://github.com/WMD-group/ElementEmbeddings)
+- Visualisation of binary element combinations generated using [SMACT](https://github.com/WMD-group/SMACT)
+- 6 element embedding schemes (magpie, mat2vec, megnet16, oliynyk, skipatom, random) provided by [ElementEmbeddings](https://github.com/WMD-group/ElementEmbeddings)
 - 3 dimensionality reduction techniques (PCA, TSNE, UMAP)
-- Visualise 3D interactive plots with crystal structures (where available from Materials Project)
+- 3D interactive plots with crystal structures (where available from Materials Project)
 
 ## Installation
 
