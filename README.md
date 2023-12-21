@@ -14,6 +14,8 @@
 - 3 dimensionality reduction techniques (PCA, TSNE, UMAP)
 - 3D interactive plots with crystal structures (where available from Materials Project)
 
+ <img src="screenshot.png" alt="alt text" width="500"/>
+
 ## Installation
 
 ```bash
