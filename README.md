@@ -24,7 +24,7 @@ cd CrystalSpace
 pip install -r requirements.txt
 ```
 
-## Usages
+## Usage
 
 - Help Command
 
