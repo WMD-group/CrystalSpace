@@ -37,3 +37,8 @@ python app.py --help
 ```bash
 python app.py --host=0.0.0.0 --port=8050
 ```
+
+## Publication
+
+"Mapping inorganic crystal chemical space" H. Park, A. Onwuli, K. T. Butler and A. Walsh, [Faraday Discussions (2024)](https://pubs.rsc.org/en/content/articlelanding/2024/fd/d4fd00063c) 	
+
