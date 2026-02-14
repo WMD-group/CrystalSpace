@@ -1,0 +1,8 @@
+# Ignore generated outputs (can be regenerated with generate_starsky.py)
+*.png
+*.gif
+*.mp4
+
+# Keep this directory
+!.gitignore
+!.gitkeep

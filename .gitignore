@@ -1,5 +1,7 @@
 # files
 *.pyc
+*.mp4
+*.gif
 
 # directories
 __pycache__

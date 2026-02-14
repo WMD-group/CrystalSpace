@@ -3,5 +3,8 @@ pandas
 ase
 pymatgen
 dash
-plotly
+plotly>=6.1.1
 dash_bootstrap_components
+kaleido>=1.0.0
+imageio
+imageio-ffmpeg
